@@ -62,4 +62,70 @@ class TreeNodeTest {
         assertEquals("0.4.2.4", query)
     }
 
+    @Test
+    fun `test id gen`() {
+        val expectedTree = QueryNode(
+            query = Query("0","0"),
+            depth = 0,
+            nodeId = "0",
+            childQueryNodes = mutableListOf(
+                QueryNode(
+                    query = Query("0.0","0.0"),
+                    depth = 1,
+                    nodeId = "0.0",
+                    childQueryNodes = mutableListOf(
+                        QueryNode(
+                            query = Query("0.0.0","0.0.0"),
+                            depth = 2,
+                            nodeId = "0.0.0"
+                        ),
+                        QueryNode(
+                            query = Query("0.0.1","0.0.1"),
+                            depth = 2,
+                            nodeId = "0.0.1"
+                        )
+                    )
+                ),
+                QueryNode(
+                    query = Query("0.1","0.1"),
+                    depth = 1,
+                    nodeId = "0.1",
+                    childQueryNodes = mutableListOf(
+                        QueryNode(
+                            query = Query("0.1.0","0.1.0"),
+                            depth = 2,
+                            nodeId = "0.1.0"
+                        ),
+                        QueryNode(
+                            query = Query("0.1.1","0.1.1"),
+                            depth = 2,
+                            nodeId = "0.1.1"
+                        )
+                    )
+                )
+            )
+        )
+
+        val regularTree = QueryNode(
+            query = Query("0","0"),
+            childQueryNodes = mutableListOf(
+                QueryNode(
+                    query = Query("0.0","0.0"),
+                    childQueryNodes = mutableListOf(
+                        QueryNode(query = Query("0.0.0","0.0.0")),
+                        QueryNode(query = Query("0.0.1","0.0.1"))
+                    )
+                ),
+                QueryNode(
+                    query = Query("0.1","0.1"),
+                    childQueryNodes = mutableListOf(
+                        QueryNode(query = Query("0.1.0","0.1.0")),
+                        QueryNode(query = Query("0.1.1","0.1.1"))
+                    )
+                )
+            )
+        )
+        assertEquals(expectedTree, regularTree.withNodeId(isRoot = true))
+    }
+
 }
