@@ -16,7 +16,7 @@ class LocalQueryRepository(
     override fun loadQueries() = flow {
         val queries = FileReader(filePath).readText()
         val tree = Json.decodeFromString<QueryNode>(queries)
-        emit(tree)
+        emit(tree.withNodeId())
     }.flowOn(Dispatchers.IO)
 
     override suspend fun checkStatus(): Boolean {

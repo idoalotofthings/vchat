@@ -1,6 +1,5 @@
 package io.github.idoalotofthings.vchat.model
 
-import io.github.idoalotofthings.vchat.ext.digitCount
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -9,7 +8,8 @@ data class QueryNode(
     val isRoot: Boolean = false,
     val query: Query,
     val depth: Int = 0,
-    val childQueryNodes: MutableList<QueryNode> = mutableListOf()
+    val childQueryNodes: MutableList<QueryNode> = mutableListOf(),
+    val nodeId: String = ""
 ) {
 
     fun getNodeAtDepthString(depthFmt: String, verticalDepth: Int): QueryNode {
@@ -22,6 +22,15 @@ data class QueryNode(
     }
 
     override fun toString(): String {
-        return "QueryNode(val = ${query.question}, children = $childQueryNodes)"
+        return "QueryNode(val = ${query.question}, depth = $depth, id = $nodeId, children = $childQueryNodes)"
+    }
+
+    fun withNodeId(nodeId: String = "0", horizontalDepth: Int = 0, verticalDepth: Int = 0, isRoot: Boolean = false): QueryNode {
+        val currentId = if(isRoot) "0" else "$nodeId.$horizontalDepth"
+        val newNodes = mutableListOf<QueryNode>()
+        for (node in childQueryNodes.indices) {
+            newNodes.add(childQueryNodes[node].withNodeId(currentId, node, verticalDepth+1))
+        }
+        return copy(childQueryNodes = newNodes, nodeId = currentId, depth = verticalDepth)
     }
 }

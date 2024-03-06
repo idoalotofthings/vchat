@@ -27,6 +27,6 @@ class NetworkQueryRepository(
     }
 
     override fun loadQueries() = flow {
-        emit(networkApiService.getQueryTree())
+        emit(networkApiService.getQueryTree().withNodeId())
     }
 }
