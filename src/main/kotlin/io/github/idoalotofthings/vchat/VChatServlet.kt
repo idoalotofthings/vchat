@@ -1,7 +1,9 @@
 package io.github.idoalotofthings.vchat
 
 import io.github.idoalotofthings.vchat.ext.digitCount
+import io.github.idoalotofthings.vchat.model.ApiResponse
 import io.github.idoalotofthings.vchat.model.QueryNode
+import io.github.idoalotofthings.vchat.model.QueryResponse
 import io.github.idoalotofthings.vchat.repository.LocalQueryRepository
 import io.github.idoalotofthings.vchat.repository.NetworkQueryRepository
 import io.github.idoalotofthings.vchat.repository.QueryRepository
@@ -51,10 +53,14 @@ class VChatServlet : HttpServlet() {
         }
 
         val nodeId = req?.getParameter("node_id") ?: "0"
-        val queryNode = tree.getNodeAtDepthString(nodeId, nodeId.digitCount())
-        val responseJson = Json.encodeToString(queryNode)
-
-        resp?.writer?.write(responseJson)
+        val queryResponses = tree.getNodeAtDepthString(nodeId, nodeId.digitCount()).childQueryNodes.map {
+            QueryResponse(
+                it.query.question,
+                it.query.answer,
+                it.nodeId
+            )
+        }
+        val response = Json.encodeToString(ApiResponse(queryResponses))
+        resp?.writer?.write(response)
     }
-
 }
