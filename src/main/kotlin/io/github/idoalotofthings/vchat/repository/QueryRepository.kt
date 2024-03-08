@@ -22,7 +22,7 @@ interface QueryRepository {
 
     fun readCache() = flow {
         try {
-            val cache = FileReader(cacheDir)
+            val cache = FileReader("$cacheDir/vchat_cache.json")
             val tree = Json.decodeFromString<QueryNode>(cache.readText())
             emit(tree)
         }  catch (ioe: IOException) {
@@ -35,7 +35,7 @@ interface QueryRepository {
 
     suspend fun writeToCache(tree: QueryNode) {
         withContext(Dispatchers.IO) {
-            val file = File(cacheDir)
+            val file = File("$cacheDir/vchat_cache.json")
             if(!file.exists()) {
                 file.createNewFile()
             }
