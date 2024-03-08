@@ -125,7 +125,7 @@ class TreeNodeTest {
                 )
             )
         )
-        assertEquals(expectedTree, regularTree.withNodeId(isRoot = true))
+        assertEquals(expectedTree, regularTree.withNodeId())
     }
 
 }
