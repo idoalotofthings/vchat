@@ -4,7 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class QueryNode(
-    val isLeafNode: Boolean = false,
     val isRoot: Boolean = false,
     val query: Query,
     val depth: Int = 0,
@@ -25,7 +24,7 @@ data class QueryNode(
         return "QueryNode(val = ${query.question}, depth = $depth, id = $nodeId, children = $childQueryNodes)"
     }
 
-    fun withNodeId(nodeId: String = "0", horizontalDepth: Int = 0, verticalDepth: Int = 0, isRoot: Boolean = false): QueryNode {
+    fun withNodeId(nodeId: String = "0", horizontalDepth: Int = 0, verticalDepth: Int = 0): QueryNode {
         val currentId = if(isRoot) "0" else "$nodeId.$horizontalDepth"
         val newNodes = mutableListOf<QueryNode>()
         for (node in childQueryNodes.indices) {
