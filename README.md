@@ -1,4 +1,4 @@
-### VChat Backend
+# VChat Backend
 
 **Basic `javax.servlet.http.HttpServlet` which provides a reliable backend to the chatbot.**
 
@@ -15,7 +15,7 @@ However, the query tree is always retained in memory for fast access. Soon, supp
 * Java target: 21
 * Kotlin version: 1.9.21
 
-# Libraries used
+### Libraries used
 1. JavaX Servlet API 4.0.1: `javax.servlet:javax.servlet-api:4.0.1`
 2. Apache Log4J 2.23.0: `org.apache.logging.log4j:log4j-core:2.23.0`
 3. KotlinX Serialization 1.6.3: `org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3`
@@ -23,6 +23,6 @@ However, the query tree is always retained in memory for fast access. Soon, supp
 5. Retrofit 2.9.0: `com.squareup.retrofit2:retrofit:2.9.0`
 6. Retrofit Converter Factory for KotlinX Serialization: `com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0`
 
-# Testing frameworks
+### Testing frameworks
 1. Kotlin Test: `org.jetbrains.kotlin:kotlin-test`
 2. Mockito: `org.mockito:mockito-core:5.11.0`
