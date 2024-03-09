@@ -8,7 +8,8 @@ Currently, three data sources exist for providing data:
 2. Local data source, looking up queries from  `WEB-INF/queries.json` in [LocalQueryRepository](src/main/kotlin/io/github/idoalotofthings/vchat/repository/LocalQueryRepository.kt)
 3. Cache, both repositories cache the received data to be as independent of the data sources in `WEB-INF/vchat_cache.json`
 
-However, the query tree is always retained in memory for fast access. Soon, support for periodic data refresh would be added
+However, the query tree is always retained in memory for fast access.
+The data is refreshed every hour
 
 # Build Information
 * Build System: Gradle 8.5
