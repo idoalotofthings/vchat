@@ -1,0 +1,10 @@
+{
+  "isRoot": true,
+  "query": {
+    "question": "Welcome to VChat!",
+    "answer": "This is a chatbot for vivekanand school!"
+  },
+  "childQueryNodes": [
+
+  ]
+}
