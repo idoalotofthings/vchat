@@ -8,6 +8,10 @@ import kotlinx.serialization.json.Json
 import java.io.File
 import java.io.FileReader
 
+/**
+ * [QueryRepository] implementation for providing data from locally persisted json file
+ * @param filePath to store the file at
+ */
 class LocalQueryRepository(
     private val filePath: String,
     override val cacheDir: String

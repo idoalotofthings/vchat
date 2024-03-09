@@ -19,14 +19,19 @@ import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.util.logging.Logger
 
+/**
+ * Servlet class for handling get requests with a single parameter, node_id of type [String]
+ */
 @WebServlet
 class VChatServlet : HttpServlet() {
 
     private val logger = Logger.getLogger(VChatServlet::class.java.name)
+
     private val servletScope = ServletCoroutineScope()
 
     // The URL for remote query source
     private val vchatQueryPath = System.getenv("VCHAT_QUERY_PATH") ?: "https://vivekanandschool.in"
+
     private lateinit var cacheDir: String
 
     private lateinit var tree: QueryNode
@@ -35,6 +40,14 @@ class VChatServlet : HttpServlet() {
 
     private lateinit var repository: QueryRepository
 
+    /**
+     * Initialises the proper [QueryRepository]. Performs the following operations in order, moving to next if one fails:
+     * 1. Checks availability of data on remote data source. On success, [NetworkQueryRepository] is retained
+     * 2. Checks availability of cache from previous instances of [NetworkQueryRepository]
+     * 3. Checks availability of local queries from local data source. On success, [LocalQueryRepository] is retained
+     * 4. Checks availability of local cache from previous instances of [LocalQueryRepository]
+     * 5. Marks API as unavailable
+     */
     private fun initRepository() {
         repository = NetworkQueryRepository(
             vchatQueryPath,
@@ -69,6 +82,7 @@ class VChatServlet : HttpServlet() {
         }
     }
 
+    // Don't override constructor, perform initial operations in this method to stay in line with Servlet Lifecycle
     override fun init(config: ServletConfig?) {
         super.init(config)
         cacheDir = servletContext.getRealPath("/WEB-INF/temp")

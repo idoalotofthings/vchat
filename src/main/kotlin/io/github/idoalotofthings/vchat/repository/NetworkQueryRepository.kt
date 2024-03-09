@@ -7,11 +7,18 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType
 import retrofit2.Retrofit
 
+/**
+ * [QueryRepository] implementation for loading data from a remote data source
+ * @param hostUrl to read data from
+ */
 class NetworkQueryRepository(
     hostUrl: String,
     override val cacheDir: String,
 ) : QueryRepository {
 
+    /**
+     * Instance of [QueryNetworkApiService] for making GET requests to the remote data source
+     */
     private val networkApiService = Retrofit.Builder()
         .baseUrl(hostUrl)
         .addConverterFactory(Json.asConverterFactory(MediaType.get("application/json")))
