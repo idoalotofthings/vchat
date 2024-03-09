@@ -9,22 +9,25 @@ import io.github.idoalotofthings.vchat.repository.LocalQueryRepository
 import io.github.idoalotofthings.vchat.repository.NetworkQueryRepository
 import io.github.idoalotofthings.vchat.repository.QueryRepository
 import io.github.idoalotofthings.vchat.server_scope.ServletCoroutineScope
-import jakarta.servlet.annotation.WebServlet
-import jakarta.servlet.http.HttpServlet
-import jakarta.servlet.http.HttpServletRequest
-import jakarta.servlet.http.HttpServletResponse
+import javax.servlet.ServletConfig
+import javax.servlet.annotation.WebServlet
+import javax.servlet.http.HttpServlet
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 import kotlinx.coroutines.launch
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import java.util.logging.Logger
 
-@WebServlet(name="VChatServlet", value = ["/chatapi"])
+@WebServlet
 class VChatServlet : HttpServlet() {
 
+    private val logger = Logger.getLogger(VChatServlet::class.java.name)
     private val servletScope = ServletCoroutineScope()
 
-    // TODO: Ensure system variable exists
+    // The URL for remote query source
     private val vchatQueryPath = System.getenv("VCHAT_QUERY_PATH") ?: "https://vivekanandschool.in"
-    private val cacheDir = servletContext.getRealPath("/WEB-INF/temp")
+    private lateinit var cacheDir: String
 
     private lateinit var tree: QueryNode
 
@@ -40,7 +43,7 @@ class VChatServlet : HttpServlet() {
         servletScope.launch {
             if(!repository.checkStatus()) {
                 repository = LocalQueryRepository(
-                    vchatQueryPath,
+                    servletContext.getRealPath("WEB-INF/")+"queries.json",
                     cacheDir
                 )
 
@@ -50,6 +53,7 @@ class VChatServlet : HttpServlet() {
                         tree = it
                     }
                 } catch(e: Exception) {
+                    logger.severe(e.message)
                     try {
                         repository.readCache().collect {
                             isAvailable = true
@@ -64,7 +68,12 @@ class VChatServlet : HttpServlet() {
             }
         }
     }
-    init { initRepository() }
+
+    override fun init(config: ServletConfig?) {
+        super.init(config)
+        cacheDir = servletContext.getRealPath("/WEB-INF/temp")
+        initRepository()
+    }
 
     public override fun doGet(req: HttpServletRequest?, resp: HttpServletResponse?) {
 

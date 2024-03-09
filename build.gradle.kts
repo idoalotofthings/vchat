@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
+    implementation("javax.servlet:javax.servlet-api:4.0.1")
     implementation("org.apache.logging.log4j:log4j-core:2.23.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
@@ -27,4 +27,14 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(21)
+}
+
+tasks.withType<War> {
+    webXml = File("src/main/resources/web.xml")
+    into("/WEB-INF/") {
+        from(sourceSets.getByName("main").resources) {
+            include("queries.json")
+        }
+    }
+    archiveFileName.set("chat.war")
 }
