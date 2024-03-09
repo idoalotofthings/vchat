@@ -11,7 +11,7 @@ Currently, three data sources exist for providing data:
 However, the query tree is always retained in memory for fast access.
 The data is refreshed every hour
 
-# Build Information
+## Build Information
 * Build System: Gradle 8.5
 * Java target: 21
 * Kotlin version: 1.9.21
