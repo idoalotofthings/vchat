@@ -4,8 +4,8 @@ import io.github.idoalotofthings.vchat.VChatServlet
 import io.github.idoalotofthings.vchat.model.ApiResponse
 import io.github.idoalotofthings.vchat.model.ApiStatus
 import io.github.idoalotofthings.vchat.model.QueryResponse
-import jakarta.servlet.http.HttpServletRequest
-import jakarta.servlet.http.HttpServletResponse
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.BeforeEach
