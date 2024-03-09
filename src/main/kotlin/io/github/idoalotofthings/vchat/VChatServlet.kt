@@ -18,6 +18,7 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.util.logging.Logger
+import kotlin.concurrent.fixedRateTimer
 
 /**
  * Servlet class for handling get requests with a single parameter, node_id of type [String]
@@ -86,7 +87,13 @@ class VChatServlet : HttpServlet() {
     override fun init(config: ServletConfig?) {
         super.init(config)
         cacheDir = servletContext.getRealPath("/WEB-INF/temp")
-        initRepository()
+        fixedRateTimer(
+            name = "Data Refresh",
+            daemon = true,
+            period = 3600000L
+        ) {
+            initRepository()
+        }
     }
 
     public override fun doGet(req: HttpServletRequest?, resp: HttpServletResponse?) {
