@@ -92,6 +92,11 @@ class VChatServlet : HttpServlet() {
             daemon = true,
             period = 3600000L
         ) {
+            if(::repository.isInitialized && ::tree.isInitialized) {
+                servletScope.launch {
+                    repository.writeToCache(tree)
+                }
+            }
             initRepository()
         }
     }

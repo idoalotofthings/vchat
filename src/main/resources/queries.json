@@ -1,10 +1,106 @@
 {
   "isRoot": true,
   "query": {
-    "question": "Welcome to VChat!",
-    "answer": "This is a chatbot for vivekanand school!"
+    "question": "Root Node",
+    "answer": "Root Node"
   },
   "childQueryNodes": [
+    {
+      "query": {
+        "question": "Why should I enroll my ward in Vivekanand School?",
+        "answer": "There are innumerable reasons for you to enroll your child in the enchanting atmosphere of Vivekanand School. For instances:\n 1. State of Art classrooms\n 2. Extravagant variety of activities\n 3. Friendly and cooperative teachers\n 4. Vibrant learning environment"
+      },
+      "childQueryNodes": [
+        {
+          "query": {
+            "question": "What is the school's approach to homework and assessments?",
+            "answer": "The school prioritizes meaningful homework that reinforces classroom learning and encourages independent thinking. Assessments are balanced between traditional testing and performance-based evaluations, with a focus on providing ongoing feedback and support for student success."
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "What is the school's educational philosophy or approach to learning?",
+            "answer": "The school embraces a student-centered approach to learning, valuing each student as an individual with unique strengths and learning styles. Our philosophy emphasizes hands-on, experiential learning opportunities that engage students and foster a deep understanding of core concepts. We prioritize critical thinking, creativity, and collaboration, preparing students to succeed in an ever-changing world. Our curriculum is designed to be rigorous and challenging, yet flexible enough to meet the diverse needs of all learners. We believe in cultivating a supportive and inclusive learning community where students feel empowered to take ownership of their education and pursue their passions."
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "What is the school's approach to technology integration in the classroom?",
+            "answer": "The school integrates technology seamlessly into every classroom, with smart boards and interactive modules enhancing lessons. Cutting-edge computer science labs offer hands-on learning in coding and robotics. Technology is woven throughout the curriculum, fostering digital literacy and responsible use."
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "What various extracurricular activities can students engage in?",
+            "answer": "Students have a wide array of extracurricular activities to choose from, including sports, dance, music, SUPW (Socially Useful Productive Work), arts and crafts, drama, debate, and participation in various clubs and organizations. These activities cater to diverse interests and help students develop valuable skills beyond the classroom."
+          },
+          "childQueryNodes": [
+            {
+              "query": {
+                "question": "What is SUPW?",
+                "answer": "SUPW stands for Socially Useful and Productive Work. It includes a plethora of activities for students to practice on a weekly basis. Various activities include Robotics, ATL, Sports, Music, Dance and many more"
+              },
+              "childQueryNodes": []
+            }
 
+          ]
+        }
+      ]
+    },
+
+    {
+      "query": {
+        "question": "What is the admission process?",
+        "answer": "The admission process is very simple. <please complete this>"
+      },
+      "childQueryNodes": [
+        {
+          "query": {
+            "question": "PLACEHOLDER",
+            "answer": "PLACEHOLDER"
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "PLACEHOLDER",
+            "answer": "PLACEHOLDER"
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "PLACEHOLDER",
+            "answer": "PLACEHOLDER"
+          },
+          "childQueryNodes": []
+        }
+      ]
+    },
+    {
+      "query": {
+        "question": "What consecrates this school?",
+        "answer": "Vivekanand School is the leading school of Delhi. It has won several education awards, and springs to the pinnacle of educational institutes in Delhi every year by proving its mettle"
+      },
+      "childQueryNodes": [
+        {
+          "query": {
+            "question": "Name the awards",
+            "answer": "Various awards include:\n 1. International School Award by the British Council\n 2. <add more>"
+          },
+          "childQueryNodes": []
+        }
+      ]
+    },
+    {
+      "query": {
+        "question": "How can I contact the school?",
+        "answer": "You can contact the school at:\n Phone: +91 11 46516983, +91 11 41055675\n E-mail: info@vivekanandschool.in"
+      },
+      "childQueryNodes": []
+    }
   ]
 }
