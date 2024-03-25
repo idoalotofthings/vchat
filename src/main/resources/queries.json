@@ -23,14 +23,86 @@
             "question": "What is the school's educational philosophy or approach to learning?",
             "answer": "The school embraces a student-centered approach to learning, valuing each student as an individual with unique strengths and learning styles. Our philosophy emphasizes hands-on, experiential learning opportunities that engage students and foster a deep understanding of core concepts. We prioritize critical thinking, creativity, and collaboration, preparing students to succeed in an ever-changing world. Our curriculum is designed to be rigorous and challenging, yet flexible enough to meet the diverse needs of all learners. We believe in cultivating a supportive and inclusive learning community where students feel empowered to take ownership of their education and pursue their passions."
           },
-          "childQueryNodes": []
+          "childQueryNodes": [
+            {
+              "query": {
+                "question": "Who inspired Vivekanand School's educational philosophy?",
+                "answer": "Vivekanand School's educational philosophy is inspired by Swami Vivekananda."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "What are the core values of education at Vivekanand School?",
+                "answer": "The core values of education at Vivekanand School include excellence, integrity, compassion, respect, and responsibility."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "How does Vivekanand School create a conducive learning environment?",
+                "answer": "Vivekanand School creates a conducive learning environment by providing state-of-the-art infrastructure, caring teachers, and various facilities that support academic, emotional, and social development."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "What is the significance of values in education at Vivekanand School?",
+                "answer": "Values play a significant role in education at Vivekanand School as they guide students to become responsible, ethical, and compassionate individuals who contribute positively to society."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "How does Vivekanand School ensure student well-being?",
+                "answer": "Vivekanand School ensures student well-being by fostering a secure and caring environment where students can thrive academically, emotionally, and socially."
+              },
+              "childQueryNodes": []
+            }
+          ]
         },
         {
           "query": {
             "question": "What is the school's approach to technology integration in the classroom?",
             "answer": "The school integrates technology seamlessly into every classroom, with smart boards and interactive modules enhancing lessons. Cutting-edge computer science labs offer hands-on learning in coding and robotics. Technology is woven throughout the curriculum, fostering digital literacy and responsible use."
           },
-          "childQueryNodes": []
+          "childQueryNodes": [
+            {
+              "query": {
+                "question": "How does Vivekanand School utilize technology in teaching and learning?",
+                "answer": "Vivekanand School utilizes technology in teaching and learning by offering ICT laboratories equipped with advanced computing devices and software tools. These facilities enable interactive learning experiences and empower students to explore diverse subjects."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "What resources does Vivekanand School provide for technology integration?",
+                "answer": "Vivekanand School provides ICT laboratories at primary, middle, and senior levels equipped with advanced computing devices and access to a wide range of software tools. Additionally, the school ensures that teachers are trained to effectively integrate technology into their teaching practices."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "How does technology integration support learning at Vivekanand School?",
+                "answer": "Technology integration supports learning at Vivekanand School by facilitating interactive and engaging learning experiences. Students can access educational resources, collaborate with peers, and develop digital literacy skills essential for success in the modern world."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "What benefits does technology integration bring to the classroom?",
+                "answer": "Technology integration brings several benefits to the classroom, including enhanced student engagement, personalized learning experiences, access to a wide range of educational resources, and preparation for success in the digital age."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "How does Vivekanand School ensure effective use of technology in the classroom?",
+                "answer": "Vivekanand School ensures effective use of technology in the classroom by providing training and support to teachers, monitoring technology usage, and continuously evaluating and updating technology resources to meet the evolving needs of students and teachers."
+              },
+              "childQueryNodes": []
+            }
+          ]
         },
         {
           "query": {
@@ -40,8 +112,36 @@
           "childQueryNodes": [
             {
               "query": {
-                "question": "What is SUPW?",
-                "answer": "SUPW stands for Socially Useful and Productive Work. It includes a plethora of activities for students to practice on a weekly basis. Various activities include Robotics, ATL, Sports, Music, Dance and many more"
+                "question": "What sports activities are available for students at Vivekanand School?",
+                "answer": "Vivekanand School offers a variety of sports activities for students, including lawn tennis, volleyball, basketball, chess, cricket, football, and badminton. These activities promote physical fitness, teamwork, and sportsmanship among students."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "What artistic and cultural activities can students participate in?",
+                "answer": "Students can participate in artistic and cultural activities such as dance, music, art and craft projects, storytelling sessions, and theater performances. These activities nurture creativity, self-expression, and appreciation for the arts."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "Are there any academic competitions or events students can take part in?",
+                "answer": "Yes, Vivekanand School organizes various academic competitions and events for students, including math and science Olympiads, debating competitions, quiz contests, and model United Nations sessions. These events encourage critical thinking, problem-solving, and academic excellence."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "How does Vivekanand School promote social initiatives among students?",
+                "answer": "Vivekanand School promotes social initiatives among students through projects such as community service programs, environmental conservation initiatives, and awareness campaigns on health and social issues. These initiatives instill empathy, compassion, and a sense of social responsibility in students."
+              },
+              "childQueryNodes": []
+            },
+            {
+              "query": {
+                "question": "Can students participate in leadership and personal development activities?",
+                "answer": "Yes, Vivekanand School provides opportunities for students to engage in leadership and personal development activities through student councils, leadership workshops, personality development sessions, and mentoring programs. These activities empower students to develop leadership skills, self-confidence, and resilience."
               },
               "childQueryNodes": []
             }
@@ -54,27 +154,41 @@
     {
       "query": {
         "question": "What is the admission process?",
-        "answer": "The admission process is very simple. <please complete this>"
+        "answer": "The admission process is very simple yet comprehensive. To ensure we pick the best talent in Delhi, every student has to go through a fixed admission process"
       },
       "childQueryNodes": [
         {
           "query": {
-            "question": "PLACEHOLDER",
-            "answer": "PLACEHOLDER"
+            "question": "What are the eligibility criteria for admission to Vivekanand School?",
+            "answer": "The eligibility criteria for admission to Vivekanand School may vary depending on the class and specific requirements of the school. Generally, applicants need to meet age requirements and provide necessary documents such as birth certificates, previous academic records, and photographs."
           },
           "childQueryNodes": []
         },
         {
           "query": {
-            "question": "PLACEHOLDER",
-            "answer": "PLACEHOLDER"
+            "question": "What documents are required for the admission process?",
+            "answer": "During the admission process, applicants are typically required to submit certain documents, including a completed application form, birth certificate, previous academic records, transfer certificate (if applicable), passport-sized photographs, and any other documents specified by the school."
           },
           "childQueryNodes": []
         },
         {
           "query": {
-            "question": "PLACEHOLDER",
-            "answer": "PLACEHOLDER"
+            "question": "Is there an entrance test or interview as part of the admission process?",
+            "answer": "Depending on the class and school policy, applicants may be required to undergo an entrance test or interview as part of the admission process. The purpose of these assessments is to evaluate the student's academic readiness, skills, and suitability for admission."
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "How are admissions decisions made at Vivekanand School?",
+            "answer": "Admissions decisions at Vivekanand School are typically based on various factors, including performance in entrance tests or interviews, availability of seats, fulfillment of eligibility criteria, and any specific requirements outlined by the school management or admission committee."
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "Are there any special considerations or preferences given during the admission process?",
+            "answer": "In some cases, Vivekanand School may give special considerations or preferences during the admission process, such as sibling admissions, alumni quotas, or prioritizing children of staff members. However, these considerations may vary and are subject to the school's admission policy."
           },
           "childQueryNodes": []
         }
@@ -89,7 +203,28 @@
         {
           "query": {
             "question": "Name the awards",
-            "answer": "Various awards include:\n 1. International School Award by the British Council\n 2. <add more>"
+            "answer": "Various awards include:\n 1. International School Award by the British Council\n 2. Sustainability Award\n 3. Times Education Icon Award\n To name a few only.."
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "How does Vivekanand School demonstrate academic excellence?",
+            "answer": "Vivekanand School demonstrates academic excellence through its rigorous curriculum, experienced faculty, and focus on holistic learning. The school emphasizes not only academic achievement but also critical thinking, problem-solving, and creativity."
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "What initiatives are undertaken to ensure holistic development?",
+            "answer": "To ensure holistic development, Vivekanand School undertakes various initiatives such as extracurricular activities, sports programs, cultural events, and community service projects. These activities help students develop their talents, skills, and character."
+          },
+          "childQueryNodes": []
+        },
+        {
+          "query": {
+            "question": "How does Vivekanand School create a nurturing environment for students?",
+            "answer": "Vivekanand School creates a nurturing environment by fostering a sense of belonging, providing personalized attention to students' needs, and promoting values such as respect, empathy, and integrity. The school prioritizes student well-being and emotional growth."
           },
           "childQueryNodes": []
         }
